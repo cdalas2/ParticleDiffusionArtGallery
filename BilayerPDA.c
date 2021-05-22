@@ -22,7 +22,7 @@ USAGE
 #define N0 (TOTAL_PROTEIN_NUM/TOTAL_LATTICE_CELLS) /* Initial number of proteins in each lattice */
 // #define D_IN 250.0 /* Diffusion coefficient inside nanodomain (nanometers^2/W) */
 // #define D_OUT 3500.0 /* Diffusion coefficient outside nanodomain (nanometers^2/W) */
-#define D_IN 30.0 /* Diffusion coefficient inside nanodomain (nanometers^2/W) */
+#define D_IN 20.0 /* Diffusion coefficient inside nanodomain (nanometers^2/W) */
 #define D_OUT 1000.0 /* Diffusion coefficient outside nanodomain (nanometers^2/W) */
 
 #define A_IN 12100.0 /* Area of nanodomain (nm^2) */
@@ -70,7 +70,7 @@ int main() {
                            periodic boundary conditions */
   int Q[TOTAL_LATTICE_CELLS]; /* will hold indexes of the lattice cells organized by their 
                their order in the event queue */
-  int SubDomainCellNum = 0*HEAD_OUTLINE_CELL_NUM + 1*HEAD_INSIDE_CELL_NUM + 0*CHAIN_CELL_NUM + 0*BILAYER_EMPTY_SPACE_INSIDE;
+  int SubDomainCellNum = 0*HEAD_OUTLINE_CELL_NUM + 0*HEAD_INSIDE_CELL_NUM + 0*CHAIN_CELL_NUM + 1*BILAYER_EMPTY_SPACE_INSIDE;
   int SubDomainCells[SubDomainCellNum];
 
   int offset = 40*9;
@@ -111,30 +111,30 @@ int main() {
 //       SubDomainCells[(HEAD_OUTLINE_CELL_NUM/2)+i] = SubDomainCells[i] + NUM_CELLS_ONESIDE*BILAYER_ROW_SPACING;
 //   }
 
-  //TOP HEAD INSIDE
-  SubDomainCells[0] = 44; SubDomainCells[1] =45; SubDomainCells[2] =50; SubDomainCells[3] =51; SubDomainCells[4] =56; SubDomainCells[5] =57; SubDomainCells[6] =62; 
-  SubDomainCells[7] =11; SubDomainCells[8] = 63; SubDomainCells[9] =68; SubDomainCells[10] =69; SubDomainCells[11] =74;
-  SubDomainCells[12] =18; SubDomainCells[13] =75; SubDomainCells[14] =80; SubDomainCells[15] =83; SubDomainCells[16] =84; SubDomainCells[17] =85;
-  SubDomainCells[18] =28; SubDomainCells[19] =86; SubDomainCells[20] =89; SubDomainCells[21] =90; SubDomainCells[22] =91;
-  SubDomainCells[23] =35; SubDomainCells[24] =92; SubDomainCells[25] =95; SubDomainCells[26] =96;
-  SubDomainCells[27] =41; SubDomainCells[28] =97; SubDomainCells[29] =98; SubDomainCells[30] =101; SubDomainCells[31] =102; SubDomainCells[32] =103; SubDomainCells[33] =104;
-  SubDomainCells[34] = 107;
-  SubDomainCells[35] =108; SubDomainCells[36] =109; SubDomainCells[37] =110; SubDomainCells[38] =113;
-  SubDomainCells[39] =114; SubDomainCells[40] =115; SubDomainCells[41] =116; SubDomainCells[42] =119; SubDomainCells[43] =120;
-  SubDomainCells[44] =123; SubDomainCells[45] =124; SubDomainCells[46] =125; SubDomainCells[47] =126; SubDomainCells[48] =129; SubDomainCells[49] =130;
-  SubDomainCells[50] =131; SubDomainCells[51] =132; SubDomainCells[52] =135; SubDomainCells[53] =136; SubDomainCells[54] =137; SubDomainCells[55] =138;
-  SubDomainCells[56] = 141; SubDomainCells[57] =142; SubDomainCells[58] =143; SubDomainCells[59] =144; SubDomainCells[60] =147; SubDomainCells[61] =148;
-  SubDomainCells[62] = 149; SubDomainCells[63] =150; SubDomainCells[64] =153;
+//   //TOP HEAD INSIDE
+//   SubDomainCells[0] = 44; SubDomainCells[1] =45; SubDomainCells[2] =50; SubDomainCells[3] =51; SubDomainCells[4] =56; SubDomainCells[5] =57; SubDomainCells[6] =62; 
+//   SubDomainCells[7] =11; SubDomainCells[8] = 63; SubDomainCells[9] =68; SubDomainCells[10] =69; SubDomainCells[11] =74;
+//   SubDomainCells[12] =18; SubDomainCells[13] =75; SubDomainCells[14] =80; SubDomainCells[15] =83; SubDomainCells[16] =84; SubDomainCells[17] =85;
+//   SubDomainCells[18] =28; SubDomainCells[19] =86; SubDomainCells[20] =89; SubDomainCells[21] =90; SubDomainCells[22] =91;
+//   SubDomainCells[23] =35; SubDomainCells[24] =92; SubDomainCells[25] =95; SubDomainCells[26] =96;
+//   SubDomainCells[27] =41; SubDomainCells[28] =97; SubDomainCells[29] =98; SubDomainCells[30] =101; SubDomainCells[31] =102; SubDomainCells[32] =103; SubDomainCells[33] =104;
+//   SubDomainCells[34] = 107;
+//   SubDomainCells[35] =108; SubDomainCells[36] =109; SubDomainCells[37] =110; SubDomainCells[38] =113;
+//   SubDomainCells[39] =114; SubDomainCells[40] =115; SubDomainCells[41] =116; SubDomainCells[42] =119; SubDomainCells[43] =120;
+//   SubDomainCells[44] =123; SubDomainCells[45] =124; SubDomainCells[46] =125; SubDomainCells[47] =126; SubDomainCells[48] =129; SubDomainCells[49] =130;
+//   SubDomainCells[50] =131; SubDomainCells[51] =132; SubDomainCells[52] =135; SubDomainCells[53] =136; SubDomainCells[54] =137; SubDomainCells[55] =138;
+//   SubDomainCells[56] = 141; SubDomainCells[57] =142; SubDomainCells[58] =143; SubDomainCells[59] =144; SubDomainCells[60] =147; SubDomainCells[61] =148;
+//   SubDomainCells[62] = 149; SubDomainCells[63] =150; SubDomainCells[64] =153;
 
-  SubDomainCells[65] =154; SubDomainCells[66] =155; SubDomainCells[67] =156; SubDomainCells[68] =159; SubDomainCells[69] =164; SubDomainCells[70] =165;
-  SubDomainCells[71] = 170; SubDomainCells[72] =171; SubDomainCells[73] =176; SubDomainCells[74] =177; SubDomainCells[75] =182; SubDomainCells[76] =183;
-  SubDomainCells[77] =188; SubDomainCells[78] =189; 
-  SubDomainCells[79] =194; SubDomainCells[80] =195;
+//   SubDomainCells[65] =154; SubDomainCells[66] =155; SubDomainCells[67] =156; SubDomainCells[68] =159; SubDomainCells[69] =164; SubDomainCells[70] =165;
+//   SubDomainCells[71] = 170; SubDomainCells[72] =171; SubDomainCells[73] =176; SubDomainCells[74] =177; SubDomainCells[75] =182; SubDomainCells[76] =183;
+//   SubDomainCells[77] =188; SubDomainCells[78] =189; 
+//   SubDomainCells[79] =194; SubDomainCells[80] =195;
 
-//BOTTOM HEAD INSIDE
-  for(int i = 0; i < (HEAD_INSIDE_CELL_NUM/2); i++){
-      SubDomainCells[(HEAD_INSIDE_CELL_NUM/2)+i] = SubDomainCells[i] + NUM_CELLS_ONESIDE*BILAYER_ROW_SPACING;
-  }
+// //BOTTOM HEAD INSIDE
+//   for(int i = 0; i < (HEAD_INSIDE_CELL_NUM/2); i++){
+//       SubDomainCells[(HEAD_INSIDE_CELL_NUM/2)+i] = SubDomainCells[i] + NUM_CELLS_ONESIDE*BILAYER_ROW_SPACING;
+//   }
 
 // //TOP CHAINS
 //   SubDomainCells[0] = 240; SubDomainCells[1] =243; SubDomainCells[2] =244; SubDomainCells[3] =245; SubDomainCells[4] =246; SubDomainCells[5] =249; SubDomainCells[6] =250; 
@@ -163,42 +163,42 @@ int main() {
 //       SubDomainCells[(CHAIN_CELL_NUM-26)+i] = SubDomainCells[i] + 9*NUM_CELLS_ONESIDE;
 //   }
 
-//   //BILAYER EMPTY SPACE INSIDE
-//   SubDomainCells[0] = 201; SubDomainCells[1] =202; SubDomainCells[2] =207; SubDomainCells[3] =208; SubDomainCells[4] =213; SubDomainCells[5] =214; SubDomainCells[6] =219; 
-//   SubDomainCells[7] =220; SubDomainCells[8] = 225; SubDomainCells[9] =226; SubDomainCells[10] =231; SubDomainCells[11] =232;
-//   SubDomainCells[12] =237; SubDomainCells[13] =238; SubDomainCells[14] =241; SubDomainCells[15] =242; SubDomainCells[16] =247; SubDomainCells[17] =248;
-//   SubDomainCells[18] =253; SubDomainCells[19] =254; SubDomainCells[20] =259; SubDomainCells[21] =260; SubDomainCells[22] =265;
-//   SubDomainCells[23] =266; SubDomainCells[24] =271; SubDomainCells[25] =272; SubDomainCells[26] =277;
-//   SubDomainCells[27] =278; SubDomainCells[28] =281; SubDomainCells[29] =282; SubDomainCells[30] =284; SubDomainCells[31] =285; SubDomainCells[32] =287; SubDomainCells[33] =288;
-//   SubDomainCells[34] = 290;
-//   SubDomainCells[35] =291; SubDomainCells[36] =293; SubDomainCells[37] =294; SubDomainCells[38] =296;
-//   SubDomainCells[39] =297; SubDomainCells[40] =299; SubDomainCells[41] =300; SubDomainCells[42] =302; SubDomainCells[43] =303;
-//   SubDomainCells[44] =305; SubDomainCells[45] =306; SubDomainCells[46] =308; SubDomainCells[47] =309; SubDomainCells[48] =311; SubDomainCells[49] =312;
-//   SubDomainCells[50] =314; SubDomainCells[51] =315; SubDomainCells[52] =317; SubDomainCells[53] =318; SubDomainCells[54] =321; SubDomainCells[55] =322;
-//   SubDomainCells[56] = 324; SubDomainCells[57] =325; SubDomainCells[58] =327; SubDomainCells[59] =328; SubDomainCells[60] =330; SubDomainCells[61] =331;
-//   SubDomainCells[62] = 333; SubDomainCells[63] =334; SubDomainCells[64] =336;
+  //BILAYER EMPTY SPACE INSIDE
+  SubDomainCells[0] = 201; SubDomainCells[1] =202; SubDomainCells[2] =207; SubDomainCells[3] =208; SubDomainCells[4] =213; SubDomainCells[5] =214; SubDomainCells[6] =219; 
+  SubDomainCells[7] =220; SubDomainCells[8] = 225; SubDomainCells[9] =226; SubDomainCells[10] =231; SubDomainCells[11] =232;
+  SubDomainCells[12] =237; SubDomainCells[13] =238; SubDomainCells[14] =241; SubDomainCells[15] =242; SubDomainCells[16] =247; SubDomainCells[17] =248;
+  SubDomainCells[18] =253; SubDomainCells[19] =254; SubDomainCells[20] =259; SubDomainCells[21] =260; SubDomainCells[22] =265;
+  SubDomainCells[23] =266; SubDomainCells[24] =271; SubDomainCells[25] =272; SubDomainCells[26] =277;
+  SubDomainCells[27] =278; SubDomainCells[28] =281; SubDomainCells[29] =282; SubDomainCells[30] =284; SubDomainCells[31] =285; SubDomainCells[32] =287; SubDomainCells[33] =288;
+  SubDomainCells[34] = 290;
+  SubDomainCells[35] =291; SubDomainCells[36] =293; SubDomainCells[37] =294; SubDomainCells[38] =296;
+  SubDomainCells[39] =297; SubDomainCells[40] =299; SubDomainCells[41] =300; SubDomainCells[42] =302; SubDomainCells[43] =303;
+  SubDomainCells[44] =305; SubDomainCells[45] =306; SubDomainCells[46] =308; SubDomainCells[47] =309; SubDomainCells[48] =311; SubDomainCells[49] =312;
+  SubDomainCells[50] =314; SubDomainCells[51] =315; SubDomainCells[52] =317; SubDomainCells[53] =318; SubDomainCells[54] =321; SubDomainCells[55] =322;
+  SubDomainCells[56] = 324; SubDomainCells[57] =325; SubDomainCells[58] =327; SubDomainCells[59] =328; SubDomainCells[60] =330; SubDomainCells[61] =331;
+  SubDomainCells[62] = 333; SubDomainCells[63] =334; SubDomainCells[64] =336;
 
-//   SubDomainCells[65] =337; SubDomainCells[66] =339; SubDomainCells[67] =340; SubDomainCells[68] =342; SubDomainCells[69] =343; SubDomainCells[70] =345;
-//   SubDomainCells[71] = 346; SubDomainCells[72] =348; SubDomainCells[73] =349; SubDomainCells[74] =351; SubDomainCells[75] =352; SubDomainCells[76] =354;
-//   SubDomainCells[77] =355; SubDomainCells[78] =357; 
-//   SubDomainCells[79] =358; SubDomainCells[80] =361; SubDomainCells[81] =362; SubDomainCells[82] =364; SubDomainCells[83] =365; SubDomainCells[84] =367; SubDomainCells[85] =368;
-//   SubDomainCells[86] =370;
-//   SubDomainCells[87] =371; SubDomainCells[88] =373; SubDomainCells[89] =374; SubDomainCells[90] =376; SubDomainCells[91] =377; SubDomainCells[92] =379; SubDomainCells[93] =380;
-//   SubDomainCells[94] =382; SubDomainCells[95] =383; SubDomainCells[96] =385; SubDomainCells[97] =386; SubDomainCells[98] =388; SubDomainCells[99] =389; SubDomainCells[100] =391;
-//   SubDomainCells[101] =392; SubDomainCells[102] =394; SubDomainCells[103] =395; SubDomainCells[104] =397; SubDomainCells[105] =398; 
-//   for(int i = 0; i < 80; i++){
-//       SubDomainCells[106+i] = 400 + i;
-//   }
-//   for(int i = 0; i < 26; i++){
-//       SubDomainCells[(BILAYER_EMPTY_SPACE_INSIDE/2) + i + 40] = SubDomainCells[i+14+14+26+26] + 3*NUM_CELLS_ONESIDE;
-//       SubDomainCells[(BILAYER_EMPTY_SPACE_INSIDE/2) + i + 40 + 26] = SubDomainCells[i+14+14+26] + 5*NUM_CELLS_ONESIDE;
-//       SubDomainCells[(BILAYER_EMPTY_SPACE_INSIDE/2) + i + 40 + 26 + 26] = SubDomainCells[i+14+14] + 7*NUM_CELLS_ONESIDE;
-//   }
-//   for(int i = 0; i < 14; i++){
-//       SubDomainCells[(BILAYER_EMPTY_SPACE_INSIDE/2) + i + 40 + 26 + 26 + 26] = SubDomainCells[i+14] + 9*NUM_CELLS_ONESIDE;
-//       SubDomainCells[(BILAYER_EMPTY_SPACE_INSIDE/2) + i + 40 + 26 + 26 + 14] = SubDomainCells[i] + 11*NUM_CELLS_ONESIDE;
+  SubDomainCells[65] =337; SubDomainCells[66] =339; SubDomainCells[67] =340; SubDomainCells[68] =342; SubDomainCells[69] =343; SubDomainCells[70] =345;
+  SubDomainCells[71] = 346; SubDomainCells[72] =348; SubDomainCells[73] =349; SubDomainCells[74] =351; SubDomainCells[75] =352; SubDomainCells[76] =354;
+  SubDomainCells[77] =355; SubDomainCells[78] =357; 
+  SubDomainCells[79] =358; SubDomainCells[80] =361; SubDomainCells[81] =362; SubDomainCells[82] =364; SubDomainCells[83] =365; SubDomainCells[84] =367; SubDomainCells[85] =368;
+  SubDomainCells[86] =370;
+  SubDomainCells[87] =371; SubDomainCells[88] =373; SubDomainCells[89] =374; SubDomainCells[90] =376; SubDomainCells[91] =377; SubDomainCells[92] =379; SubDomainCells[93] =380;
+  SubDomainCells[94] =382; SubDomainCells[95] =383; SubDomainCells[96] =385; SubDomainCells[97] =386; SubDomainCells[98] =388; SubDomainCells[99] =389; SubDomainCells[100] =391;
+  SubDomainCells[101] =392; SubDomainCells[102] =394; SubDomainCells[103] =395; SubDomainCells[104] =397; SubDomainCells[105] =398; 
+  for(int i = 0; i < 80; i++){
+      SubDomainCells[106+i] = 400 + i;
+  }
+  for(int i = 0; i < 26; i++){
+      SubDomainCells[(BILAYER_EMPTY_SPACE_INSIDE/2) + i + 40] = SubDomainCells[i+14+14+26+26] + 3*NUM_CELLS_ONESIDE;
+      SubDomainCells[(BILAYER_EMPTY_SPACE_INSIDE/2) + i + 40 + 26] = SubDomainCells[i+14+14+26] + 5*NUM_CELLS_ONESIDE;
+      SubDomainCells[(BILAYER_EMPTY_SPACE_INSIDE/2) + i + 40 + 26 + 26] = SubDomainCells[i+14+14] + 7*NUM_CELLS_ONESIDE;
+  }
+  for(int i = 0; i < 14; i++){
+      SubDomainCells[(BILAYER_EMPTY_SPACE_INSIDE/2) + i + 40 + 26 + 26 + 26] = SubDomainCells[i+14] + 9*NUM_CELLS_ONESIDE;
+      SubDomainCells[(BILAYER_EMPTY_SPACE_INSIDE/2) + i + 40 + 26 + 26 + 26 + 14] = SubDomainCells[i] + 11*NUM_CELLS_ONESIDE;
 
-//   }
+  }
 
 
   for(int i =0; i < SubDomainCellNum; i++){

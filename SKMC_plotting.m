@@ -35,7 +35,7 @@
 clear all
 close all
 clc
-PositionsData = load("BilayerPDAHeadInside.o");
+PositionsData = load("BilayerPDAEmptySpaceInside.o");
 Sender = PositionsData(1:end-1,1)+1;
 Receiver = PositionsData(1:end-1,2)+1;
 rho = PositionsData(1:end-1,3);
