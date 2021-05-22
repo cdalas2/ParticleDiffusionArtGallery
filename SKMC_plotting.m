@@ -35,7 +35,7 @@
 clear all
 close all
 clc
-PositionsData = load("monoFlagellateBacteriaStill.o");
+PositionsData = load("BilayerPDAHeadInside.o");
 Sender = PositionsData(1:end-1,1)+1;
 Receiver = PositionsData(1:end-1,2)+1;
 rho = PositionsData(1:end-1,3);
@@ -73,7 +73,7 @@ set(gca,'Color',[0.03,0.18,0.52]);
 hp=plot(Positions(:,1),Positions(:,2),'.','MarkerSize',15,'MarkerEdgeColor',[0.3,0.75,0.93],...
     'MarkerFaceColor',[0.3,0.75,0.93]);
 % hp=plot(Positions(:,1),Positions(:,2),'r.','MarkerSize',30);
-v = VideoWriter('monoFlagellateBacteriaStill');
+v = VideoWriter('test');
 v.Quality = 95;
 open(v);
 snapiter = 1;
