@@ -1,7 +1,11 @@
 # ParticleDiffusionArt
-![monoFlagellateBacteriaStill](https://github.com/cdalas2/ParticleDiffusionArt/blob/main/monoFlagellateBacteriaStill.gif?raw=true)
-
 ![USCPHYS](https://user-images.githubusercontent.com/62254347/117349003-bcf17900-ae5f-11eb-9f3b-d0ceb8e59e50.gif)
 >We made this gif using our SKMC code, where the letters are subdomains assigned a slower diffusion rate.
 
 ![BacteriaBusRide2D](https://user-images.githubusercontent.com/62254347/118174728-09026780-b3e4-11eb-987f-f3936eb19c82.gif)
+
+![monoFlagellateBacteriaStill](https://user-images.githubusercontent.com/62254347/119588021-c39b4e00-bd84-11eb-8ccb-64f1e785baca.gif)
+
+
+
+
