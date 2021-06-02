@@ -1,5 +1,5 @@
 # ParticleDiffusionArt
-I made these cool GIFs of KMC simulations with parameters manipulated to form these interesting images made of diffusing particles. I call it Particle Diffusion Art (PDA). Welcome to the first ever PDA gallery!
+I made these cool GIFs of KMC simulations with parameters manipulated to form these pre-drawn images made of diffusing particles. I call it Particle Diffusion Art (PDA). Welcome to the first ever PDA gallery!
 
 
 ![USCPHYS](https://user-images.githubusercontent.com/62254347/117349003-bcf17900-ae5f-11eb-9f3b-d0ceb8e59e50.gif)
