@@ -14,7 +14,6 @@ Bacteria Bus Ride
 
 Monoflagellate Bacteria Still
 
-![monoFlagellateBacteriaFlappingCUBED](https://user-images.githubusercontent.com/62254347/184515314-828f9731-5024-4851-b90a-a1b9c50a837b.gif)
 
 Monoflagellate Bacteria Swimming
 
@@ -22,3 +21,6 @@ Monoflagellate Bacteria Swimming
 
 Lipid Bilayer
 
+![TravelersPDA](https://user-images.githubusercontent.com/62254347/184515383-dd82531b-dabf-4988-9f1a-f30f1ee64928.gif)
+
+Traveler's Umbrella (Purely for artistic purposes and does not represent Traveler's Insurance policies in any way)
