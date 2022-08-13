@@ -23,4 +23,4 @@ Lipid Bilayer
 
 ![TravelersPDA](https://user-images.githubusercontent.com/62254347/184515383-dd82531b-dabf-4988-9f1a-f30f1ee64928.gif)
 
-Traveler's Umbrella (Purely for artistic purposes and does not represent Traveler's Insurance policies in any way)
+Travelers Umbrella (Purely for artistic purposes and does not represent Travelers Insurance policies in any way)
