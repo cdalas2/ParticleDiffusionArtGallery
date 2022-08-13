@@ -14,6 +14,10 @@ Bacteria Bus Ride
 
 Monoflagellate Bacteria Still
 
+![monoFlagellateBacteriaFlappingCUBED](https://user-images.githubusercontent.com/62254347/184515314-828f9731-5024-4851-b90a-a1b9c50a837b.gif)
+
+Monoflagellate Bacteria Swimming
+
 ![BilayerPDA](https://user-images.githubusercontent.com/62254347/119588268-4c19ee80-bd85-11eb-9c02-ec1d59df4910.gif)
 
 Lipid Bilayer
